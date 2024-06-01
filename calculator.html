@@ -1,138 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Basic Calculator</title>
-    <style>
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+<title>Calculator</title>
+<style>
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  width: 30%;
+  height: 30%;
 }
 
-.calculator {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+table, td {
+  text-align: center;
+  background-color: #3498DB;
+  border-radius:15px 15px 15px 15px;
 }
 
-.calculator-display {
-    font-size: 2em;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: right;
-    background-color: #f7f7f7;
+button {
+border-radius:12px 12px 12px 12px;
+}
+button:hover{
+cursor:pointer;
+}
+</style>
+
+<script>
+
+function ac(){
+     document.getElementById("res").value="";
 }
 
-.calculator-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+function show(input){
+      document.getElementById("res").value+=input;
 }
 
-.button {
-    padding: 20px;
-    font-size: 1.5em;
-    border: none;
-    border-radius: 5px;
-    background-color: #e0e0e0;
-    cursor: pointer;
-    transition: background-color 0.2s;
+function cal(){
+      var output=eval(document.getElementById("res").value);
+      document.getElementById("res").value=output;
 }
 
-.button:hover {
-    background-color: #d4d4d4;
-}
-
-.button.operator {
-    background-color: #ff8c00;
-    color: #fff;
-}
-
-.button.operator:hover {
-    background-color: #ff7f00;
-}
-
-    </style>
-    <scipt>
-        document.addEventListener('DOMContentLoaded', function () {
-    const display = document.getElementById('display');
-    const buttons = document.querySelectorAll('.button');
-    let currentInput = '';
-    let previousInput = '';
-    let operator = '';
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const value = button.getAttribute('data-value');
-            if (value === '+' || value === '-' || value === '*' || value === '/') {
-                operator = value;
-                previousInput = currentInput;
-                currentInput = '';
-            } else if (value === '=') {
-                currentInput = calculate(previousInput, currentInput, operator);
-                operator = '';
-            } else if (value === 'C') {
-                currentInput = '';
-                previousInput = '';
-                operator = '';
-            } else {
-                currentInput += value;
-            }
-            display.innerText = currentInput || '0';
-        });
-    });
-
-    function calculate(num1, num2, operator) {
-        num1 = parseFloat(num1);
-        num2 = parseFloat(num2);
-        switch (operator) {
-            case '+':
-                return (num1 + num2).toString();
-            case '-':
-                return (num1 - num2).toString();
-            case '*':
-                return (num1 * num2).toString();
-            case '/':
-                return (num1 / num2).toString();
-            default:
-                return num2;
-        }
-    }
-});
-
-    </scipt>
+</script>
 </head>
 <body>
-    <div class="calculator">
-        <div class="calculator-display" id="display">0</div>
-        <div class="calculator-buttons">
-            <button class="button" data-value="7">7</button>
-            <button class="button" data-value="8">8</button>
-            <button class="button" data-value="9">9</button>
-            <button class="button operator" data-value="+">+</button>
-            <button class="button" data-value="4">4</button>
-            <button class="button" data-value="5">5</button>
-            <button class="button" data-value="6">6</button>
-            <button class="button operator" data-value="-">-</button>
-            <button class="button" data-value="1">1</button>
-            <button class="button" data-value="2">2</button>
-            <button class="button" data-value="3">3</button>
-            <button class="button operator" data-value="*">*</button>
-            <button class="button" data-value="0">0</button>
-            <button class="button" data-value=".">.</button>
-            <button class="button" id="clear">C</button>
-            <button class="button operator" data-value="/">/</button>
-            <button class="button" id="equals">=</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
+<table  border="1"  class="center" >
+<caption>Calculator</caption>
+<tr>
+<td colspan="3"><input type="text" Id="res" size="50"></td>
+<td colspan="1"><button onclick="ac()">AC</button></td>
+</tr>
+
+<tr>
+<td><button onclick="show('1')">1</button></td> 
+<td><button onclick="show('2')">2</button></td>
+<td><button onclick="show('3')">3</button></td>
+<td colspan="1"><button onclick="show('+')">+</button></td>
+</tr>
+
+<tr>
+<td><button onclick="show('4')">4</button></td> 
+<td><button onclick="show('5')">5</button></td>
+<td><button onclick="show('6')">6</button></td>
+<td><button onclick="show('-')">-</button></td>
+</tr>
+
+<tr>
+<td><button onclick="show('7')">7</button></td> 
+<td><button onclick="show('8')">8</button></td>
+<td><button onclick="show('9')">9</button></td>
+<td><button onclick="show('*')">*</button></td>
+</tr>
+
+<tr>
+<td><button onclick="show('0')">0</button></td> 
+<td><button onclick="show('%')">%</button></td>
+<td><button onclick="show('/')">/</button></td>
+<td><button onclick="cal()">=</button></td>
+</tr>
+
+</table>
 </body>
 </html>
