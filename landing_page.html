@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Agency Landing Page</title>
+
+<style>
+        *{
+            box-sizing: border-box;
+        }
+      :root{
+        --main-color:rgb(248, 79, 1);
+        --primary-color:#FFC727;
+      }
+    body{
+     background-color:#DB9C34;
+
+      }
+        a{
+            text-decoration: none;
+        }
+    .topnav {
+    overflow-x: hidden;
+    margin-left: 8%;
+    margin-right: 8%;
+    overflow-x: hidden;
+    }
+    .logo{
+        font-weight: bolder;
+    }
+    .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .topnav a:hover {
+    color: var(--primary-color);
+    }
+ .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+    }
+    .topnav .icon {
+    display: none;
+    }
+    .menu-items{
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+    .sign-in-btn{
+        border: 2px solid black;
+        width: 8rem;
+        border-radius: 2rem;
+    }
+    .sign-up-btn{
+        border: 2px solid #fe4848;
+        width: 9rem;
+        color:#fff;
+        background-color: rgb(248, 79, 1);
+        border-radius: 2rem;
+    }
+  \  main{
+        margin-left: 8%;
+        margin-right: 8%;
+        overflow-x: hidden;
+    }
+    .hero-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 50%));
+        width: 100%;
+        height: auto;
+    }
+    .heading-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .main-heading{
+        font-size: 4.9rem;
+    }
+    .colorfull{
+        color: rgb(248, 79, 1);
+    }
+    .text-description{
+        font-size: 1.1rem;
+        margin-top: -1.1rem;
+    }
+    .call-to-action{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .btn{
+        border: 2px solid #fe4848;
+        width: 9rem;
+        color:#fff;
+        padding: 0.5rem;
+        background-color: rgb(248, 79, 1);
+        border-radius: 2rem;
+        text-align: center;
+    }
+    .watch-btn{
+        border: 2px solid var(--primary-color);
+        width: 9rem;
+        color:#fff;
+        padding: 0.5rem;
+        background-color: var(--primary-color);
+        border-radius: 2rem;
+        text-align: center;
+    }
+    
+      .client{
+        margin-left: 8%;
+        margin-right: 8%;
+        overflow-x: hidden;
+      }
+      
+      .container {
+        overflow: hidden;
+        overflow-x: hidden;
+        .slider {
+          animation: slidein 15s linear infinite;
+          white-space: nowrap;
+          .logos {
+            width: 100%;
+            display: inline-block;
+            margin: 0px 0;
+            .fa {
+              width: calc(100% / 5);
+              animation: fade-in 0.5s 
+                cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+            }
+          }
+        }
+      }
+      
+      @keyframes slidein {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .text-center{
+        text-align: center;
+        font-size: 1.8rem;
+      }
+      .about{
+        margin-left: 8%;
+        margin-right: 8%;
+       
+      }
+      .about-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45%, 50%));
+      }
+      
+      .about-img{
+        height: 100%;
+        width: 100%;
+      }
+      .about-text{
+        width: 100%;
+      }
+      .about-us-items{
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+      }
+      .about-main-heading{
+        font-size: 1.6rem;
+        color: var(--main-color) ;
+      }
+      .about-description{
+        font-size: 4rem;
+        margin-top: -2rem;
+      }
+      .about-feature{
+        display: flex;
+        flex-direction: column;
+        margin-top: -5.6rem;
+      }
+      .about-feature-items{
+        font-size: 1.3rem;
+        margin-right: 40%;
+        
+        
+      }
+      .about-feature-one{
+        display: flex;
+        gap:20px;
+        margin-top: 0.9rem;
+      }
+      .about-icon{
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        padding: 0.7rem;
+        color: var(--main-color);
+      }
+      .about-btn{
+            border: 2px solid #fe4848;
+            width: 9rem;
+            color:#fff;
+            padding: 0.5rem;
+            background-color: rgb(248, 79, 1);
+            border-radius: 2rem;
+            text-align: center;
+            margin-top: 0.4rem;
+       }
+
+        .services{
+          margin:2% 8% 0 8% ;
+        }
+        .services-container{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .services-text{
+          width: 100%;
+        }
+        .services-text-detail{
+          width: 100%;
+          margin-top: 6rem;
+        }
+        .services-heading{
+          font-size: 1.6rem;
+          color: var(--main-color) ;
+        }
+        .services-sub-heading{
+          font-size: 3.2rem;
+          margin-top: 1rem;
+        }
+        .services-heading-detail{
+          font-size: 1.1rem;
+          margin-top: -1rem;
+          margin-right: 15rem;
+          margin-bottom: 2.8rem;
+        }
+        .services-btn{
+          border: 2px solid #fe4848;
+          width: 11rem;
+          color:#fff;
+          padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+          background-color: rgb(248, 79, 1);
+          border-radius: 2rem;
+          text-align: center;
+          margin-top: 7rem;
+        }
+        .services-list{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(48%, 50%));
+        }
+        .services-list-items{
+          background-color: rgb(248, 248, 248);
+          border-radius: 1rem;
+          display: flex;
+          height: 250px;
+          width: 260px;
+          flex-direction: column;
+          margin-top: 1rem;
+        }
+        .services-icon{
+          color: var(--main-color);
+          font-size: 7rem;
+          text-align: center;
+          height: 2.5rem;
+          margin-top: 1rem;
+        }
+        .services-list-heading{
+          text-align: center;
+          font-size: 1.6rem;
+          
+        }
+        .services-list-detail{
+          text-align: center;
+          margin-top: -0.2rem;
+        }
+        .services-link{
+          text-align: center;
+          color: #000;
+        }
+        .services-link-colorfull{
+          text-align: center;
+          color: var(--main-color);
+        }
+        
+        .choose-us{
+          margin: 3% 8% 0 8%;
+        }
+        .choose-us-container{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(48%, 50%));
+        }
+        .choose-us-items{
+          width: 100%;
+        }
+        .choose-us-text{
+          margin-top: 20%;
+        }
+        .choose-us-heading{
+          font-size: 1.6rem;
+          color: var(--main-color) ;
+        }
+        .choose-us-title{
+          font-size: 3.2rem;
+          margin-top: 1rem;
+        }
+         .choose-us-description{
+          font-size: 1.1rem;
+          margin-top: -1rem;
+          margin-right: 9rem;
+         }
+         .choose-us-list-div{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(48%, 50%));
+          margin-top: 2rem;
+         }
+         .choose-us-items-list{
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          font-size: 1.4rem;
+          font-weight: 600;
+         }
+               .growth{
+          margin:2% 8% 0 8% ;
+        }
+        .growth-container{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .growth-text{
+          width: 100%;
+          margin-top: 3rem;
+        }
+        .growth-text-detail{
+          width: 100%;
+          margin-top: 6rem;
+        }
+        .growth-heading{
+          font-size: 1.6rem;
+        }
+        .growth-sub-heading{
+          font-size: 3rem;
+          margin-top: 1rem;
+        }
+        .growth-heading-detail{
+          font-size: 1.1rem;
+          margin-top: -1rem;
+          margin-right: 15rem;
+          margin-bottom: 2.8rem;
+        }
+        .growth-btn{
+          border: 2px solid #fe4848;
+          width: 11rem;
+          color:#fff;
+          padding: 0.5rem 1.3rem 0.5rem 1.3rem;
+          background-color: rgb(248, 79, 1);
+          border-radius: 2rem;
+          text-align: center;
+          margin-top: 7rem;
+        }
+      
+               .feedback{
+          margin:2% 8% 0 8% ;
+          overflow-x: hidden;
+        }
+        .feedback-heading{
+          text-align: center;
+          margin: 0 20% 0 20%;
+        }
+        .feedback-main-heading{
+          font-size: 3rem;
+        }
+        .feedback-sub-heading{
+          font-size: 1rem;
+          margin-top: -1.7rem;
+        }
+        .feedback-container{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(50%, 50%));
+        }
+
+        .feedback-text-container{
+          width: 100%;
+        }
+        .client-feedback{
+          width: 100%;
+          margin-top: 7rem;
+        }
+        .client-rating{
+          height: 10rem;
+          width: 10rem;
+        }
+        .feedback-rating-heading{
+          margin-right: 8rem;
+          font-size: 1.5rem;
+          margin-top: -4rem;
+        }
+        .client-name{
+          font-size: 1.8rem;
+        }
+        .client-title{
+          font-size: 1rem;
+          margin-top: -2rem;
+        }
+        .feedback-arrow{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          color: white;
+          gap: 0.4rem;
+        }
+        .left-arrow{
+          color: white;
+          background-color: #34444b;;
+          padding: 1rem;
+        }
+        .right-arrow{
+          color: white;
+          background-color: var(--main-color);
+          padding: 1rem;
+        }
+                  .newsletter{
+            margin: 2% 8% 0 8%;
+            overflow-x: hidden;
+            background: linear-gradient(180deg, #b7ef73 0%, #5d90ee 100%);
+            border-radius: 2rem;
+          }
+          .newsletter-container{
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+          }
+          .newsletter-heading{
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--main-color);
+          }
+          .newsletter-sub-heading{
+            text-align: center;
+            font-size: 2.2rem;
+            margin-top: -1rem;
+          }
+          .newsletter-description{
+            text-align: center;
+            margin: 0 22% 0 22%;
+            margin-top: -2rem;
+          }
+          .newsletter-form{
+           display: flex;
+           justify-content: center;
+           
+          }
+          .subscription {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 50%;
+            height: 100%;
+        }
+
+        .add-email {
+            flex: 1;
+            height: 4rem;
+            padding: 10px;
+            justify-content: center;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+        }
+
+        .add-email input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 5rem 0 0 5rem;
+            font-size: 14px;
+ }
+
+        .add-email button {
+            border: none;
+            border-radius: 0 5rem 5rem 0;
+            outline: none;
+            cursor: pointer;
+            background: var(--primary-color);
+            color: #FFFFFF;
+            padding: 10px;
+            font-size: 14px; 
+}
+
+        .add-email button:hover {
+            background: var(--main-color);
+        }
+                  .footer{
+            margin: 2% 8% 0 8%;
+            overflow-y: hidden;
+            overflow-x: hidden;
+          }
+          .footer-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25%, 25%));
+          }
+          .footer-main-heading{
+            font-size: 1.4rem;
+            justify-content: center;
+          }
+          .footer-main-heading::after{
+            content: "";
+            display: flex;
+            height: 0.2rem;
+            width: 4rem;
+            position: absolute;
+            justify-content: start;
+            background-color: var(--main-color);
+          }
+          .footer-angle{
+            color: var(--main-color);
+            margin-bottom: 10px;
+            
+          }
+          .footer-coloum-one-description{
+            font-size: 1.1rem;
+            text-align: start;
+            margin-right: 0.6rem;
+          }
+         
+          .footer-one-menu{
+            list-style: none;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+          }
+
+       .footer-one-menu a {
+            color: #34444b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin-bottom: 10px;
+            text-align: start;
+        }
+        .footer-contact{
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          margin-top: 0.7rem;
+         
+        }
+        .footer-icon{
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          margin-top: 0.7rem;
+          background-color: #fff;
+          padding: 1rem;
+          border-radius: 50%;
+         
+        }
+        .footer-line{
+          color:var(--main-color);
+          width: 98%;
+        }
+        .footer-underline-menu-items a{
+          color: #34444b;
+          padding: 1rem;
+          text-align: center;
+        }
+        .footer-underline-menu{
+          justify-content: space-between;
+          display: flex;
+        }
+        .footer-credit a{
+          color: var(--main-color);
+        }
+
+
+@media only screen and (max-width:400px){
+.card{
+width:90%;
+height:90%;
+}
+}
+
+@media only screen and (max-width:800px){
+.card{
+width:90%;
+height:90%;
+}
+}
+
+
+</style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#logo" class="logo">Digital Agency</a>
+        <div class="menu-items">
+        <a href="#home">Home</a>
+        <a href="#about">Features</a>
+        <a href="#about">Pricing & Plans</a>
+        <a href="#contact">Services</a>
+        <a href="#contact">About</a>
+        <a href="#contact" class="sign-up-btn" style="color: white;">Contact Us</a>
+        <i class="fa fa-bars"></i>
+        </a>
+        </div>
+    </div>
+    <main>
+        <div class="hero-container">
+            <div class="main-container">
+                <div class="heading-container">
+                    <h1 class="main-heading">
+                        We Are Best <Span class="colorfull"> Digital Marketing </Span> Agency
+                    </h1>
+                    <p class="text-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit,
+                         exercitationem reiciendis cumque obcaecati fugit quidem
+                         sint veniam magni itaque dolor sequi. Placeat harum
+                          delectus modi sit esse, quis debitis!
+                    </p>
+                    <div class="call-to-action">
+                        <a href="" class="btn">Get Started</a>
+                        <a href="" class="watch-btn"> <i class="fa fa-play-circle"></i>Watch Video</a>
+                    </div>
+                </div>
+             </main>
+        <section class="client">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+            <div class="container rounded">
+                <h1 class="text-center">Our Trusted Client</h1>
+                <div class="slider">
+                <div class="logos">
+                    <i class="fa fa-js"></i>
+                    <i class="fa fa-linkedin fa-4x"></i>
+                    <i class="fa fa-dribbble fa-4x"></i>
+                    <i class="fa fa-medium fa-4x"></i>
+                    <i class="fa fa-github fa-4x"></i>
+                </div>
+                <div class="logos">
+                    <i class="fa fa-js-fa-4x"></i>
+                    <i class="fa fa-linkedin fa-4x"></i>
+                    <i class="fa fa-dribbble fa-4x"></i>
+                    <i class="fa fa-medium fa-4x"></i>
+                    <i class="fa fa-github fa-4x"></i>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!--End Client Session-->
+
+    <!--About Session-->
+      <section class="about">
+            <div class="about-text">
+                 <div class="about-us-items">
+                    <h4 class="about-main-heading">
+                       About Us 
+                    </h4>
+                    <h5 class="about-description">
+                        We are here for business <span class="colorfull">solution & Ideas</span>
+                    </h5>
+                    <div class="about-feature">
+                    <div class="about-feature-one">
+                        
+                       <span class="about-feature-items">
+                        World Best Search Engine Optimization
+                      </span>
+                      </div>
+                      <div class="about-feature-one">
+                       
+                       <span class="about-feature-items">
+                        World Creative & Professional Content Writer
+                      </span>
+                      </div>
+                      <div class="about-feature-one">
+                        
+                       <span class="about-feature-items">
+                        optimized Your Business Growth Next Level
+                      </span>
+                      </div>
+                      <a href="" class="about-btn">Contact Us</a>
+                   </div>
+                 </div>
+            </div>
+         </div>
+      </section>
+      <section class="services">
+            <div class="services-container">
+                <div class="services-text">
+                    <div class="services-text-detail">
+                        <h1 class="services-heading">
+                         What We Do
+                        </h1>
+                        <h3 class="services-sub-heading">
+                            Choose What You Like Our <span class="colorfull">Best Services</span> 
+                        </h3>
+                        <p class="services-heading-detail">
+                            Digital marketing is a component of marketing that utilizes internet and online
+                            base digital technologies, platforms to promote products and services.
+                        </p>
+                        <a href="" class="services-btn">Explore all services</a>
+                    </div>
+                </div>
+                <div class="services-items">
+                    <div class="services-list">
+                         <!--first services-->
+                         <div class="services-list-items">
+                           
+                            <h1 class="services-list-heading">
+                                Digital Marketing
+                            </h1>
+                            <p class="services-list-detail">
+                                Digital marketing is a component of marketing
+                                 that utilizes internet and online
+                                base digital technologies
+                            </p>
+                            <a href="http://" class="services-link">See More <i class="fa fa-arrow-right services-link-icon"></i></a>
+                         </div>
+                                                   <div class="services-list-items">
+                            
+                             <h1 class="services-list-heading">
+                                 SEO
+                             </h1>
+                             <p class="services-list-detail">
+                                 Digital marketing is a component of marketing
+                                  that utilizes internet and online
+                                 base digital technologies
+                             </p>
+                             <a href="http://" class="services-link">See More <i class="fa fa-arrow-right services-link-icon"></i></a>
+                          </div>
+                          
+                         <div class="services-list-items">
+                            
+                             <h1 class="services-list-heading">
+                                 UI UX Design
+                             </h1>
+                             <p class="services-list-detail">
+                                 Digital marketing is a component of marketing
+                                  that utilizes internet and online
+                                 base digital technologies
+                             </p>
+                             <a href="http://" class="services-link-colorfull">See More <i class="fa fa-arrow-right services-link-icon"></i></a>
+                          </div>
+                                                    <div class="services-list-items">
+                           
+                             <h1 class="services-list-heading">
+                                Web Development
+                             </h1>
+                             <p class="services-list-detail">
+                                 Digital marketing is a component of marketing
+                                  that utilizes internet and online
+                                 base digital technologies
+                             </p>
+                             <a href="http://" class="services-link">See More <i class="fa fa-arrow-right services-link-icon"></i></a>
+                          </div>
+                           
+                    </div>
+                </div>
+            </div>
+      </section>
+           <section class="choose-us">
+           <div class="choose-us-container">
+                <div class="choose-us-items">
+                      <div class="choose-us-text">
+                        <h1 class="choose-us-heading">
+                            Choose Us
+                           </h1>
+                           <h3 class="choose-us-title">Why <span class="colorfull">Choose</span> Us?</h3>
+                         <p class="choose-us-description">
+                            Digital marketing is a component of marketing that utilizes internet and online
+                            base digital technologies, platforms to promote products and services.
+                         </p>
+                         <div class="choose-us-list-div">
+                           <div class="choose-us-items-list">
+                              <span style="color:#FFC727;font-weight: bolder;">12+</span>
+                              <span>Years Experience</span>
+                           </div>
+
+                           <div class="choose-us-items-list">
+                            <span style="color:rgb(248, 79, 1);font-weight: bolder;">500K+</span>
+                            <span>Project Done</span>
+                         </div>
+                        <div class="choose-us-items-list">
+                            <span style="color:rgb(248, 79, 1);font-weight: bolder;">50+</span>
+                            <span>Team Associates</span>
+                         </div>
+
+                         <div class="choose-us-items-list">
+                          <span style="color:#FFC727;font-weight: bolder;">24/7</span>
+                          <span>Support Available</span>
+                       </div>
+                       <div class="choose-us-list-div"></div>
+                      </div>
+                      </div>
+                </div>
+           </div>
+       </section>
+           <section class="growth">
+            <div class="growth-container">
+                <div class="growth-text">
+                    <div class="growth-text-detail">
+                        <h1 class="growth-heading">
+                        Growth Your Business
+                        </h1>
+                        <h3 class="growth-sub-heading">
+                           <span class="colorfull">Marketing</span> Is The Most Powerfull Part Of Growing Your <span class="colorfull">Business Ability </span>
+                        </h3>
+                        <p class="growth-heading-detail">
+                            Digital marketing is a component of marketing that utilizes internet and online
+                            base digital technologies, platforms to promote products and services.
+                        </p>
+                        <a href="" class="growth-btn">Explore More</a>
+                    </div>
+                </div>
+                <div class="growth-image">
+                   <img src="assets/img/growth.svg" class="growth-img"alt="">
+                </div>
+            </div>
+      </section>
+        <section class="feedback">
+             <div class="feedback-heading">
+                <h1 class="feedback-main-heading">Here Something From <span class="colorfull">Our Client </span></h1>
+                <p class="feedback-sub-heading">Digital marketing is a component of marketing 
+                    that utilizes internet and online base 
+                    digital technologies, platforms to
+                     promote products and services.</p>
+               </div>
+               <div class="feedback-container">
+                  <div class="feedback-image">
+                    
+                  </div>
+                  <div class="feedback-text-container">
+                   
+                     <div class="client-feedback">
+                        
+                        class="client-rating"alt="">
+                        <p class="feedback-rating-heading">Digital marketing is a component of marketing 
+                    that utilizes internet and online base 
+                    digital technologies, platforms to
+                     promote products and services.</p>
+                     <h4 class="client-name">Mrs Mofiza</h4>
+                     <h6 class="client-title">Managing Director</h6>
+                     <div class="feedback-arrow">
+                        <div class="left-arrow" onclick="showFeedback('back')">
+                            <i class="fa fa-arrow-left"></i>
+                        </div>
+                        <div class="right-arrow" onclick="showFeedback('next')">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="client-feedback"style="display:none;">
+                      
+                        class="client-rating"alt="">
+                        <p class="feedback-rating-heading">Digital marketing is a component of marketing 
+                    that utilizes internet and online base 
+                    digital technologies, platforms to
+                     promote products and services.</p>
+                     <h4 class="client-name">Adnan Khan</h4>
+                     <h6 class="client-title">CEO & founder</h6>
+                     <div class="feedback-arrow">
+                        <div class="left-arrow" onclick="showFeedback('back')">
+                            <i class="fa fa-arrow-left"></i>
+                        </div>
+                        <div class="right-arrow" onclick="showFeedback('next')">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    </div>
+                                       <div class="client-feedback" style="display: none;">
+                        <img src="https://freesvg.org/img/16231558095-star-rating.png" 
+                        class="client-rating"alt="">
+                        <p class="feedback-rating-heading">Digital marketing is a component of marketing 
+                    that utilizes internet and online base 
+                    digital technologies, platforms to
+                     promote products and services.</p>
+                     <h4 class="client-name">Mrs Majid</h4>
+                     <h6 class="client-title">Human Resourse</h6>
+                     <div class="feedback-arrow">
+                        <div class="left-arrow" onclick="showFeedback('back')">
+                            <i class="fa fa-arrow-left"></i>
+                        </div>
+                        <div class="right-arrow" onclick="showFeedback('next')">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+               </div>
+        </section>
+
+          <section class="newsletter">
+           <div class="newsletter-container">
+            <h1 class="newsletter-heading">
+                Newsletter
+                </h1>
+            <h4 class="newsletter-sub-heading">
+                Subscribe Maillist Our Latest <span class="colorfull">Newsletter</span>
+            </h4>
+            <p class="newsletter-description">
+                Digital marketing is a component of marketing 
+                    that utilizes internet and online base 
+                    digital technologies, platforms to
+                     promote products and services.
+            </p>
+               <div class="newsletter-form">
+                <form class="subscription">
+                    <div class="add-email">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+           </div>
+      </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-coloum-one">
+                    <h1 class="footer-main-heading">Digital Agency</h1>
+                     <p class="footer-coloum-one-description">
+                    Digital marketing is a component of marketing 
+                    that utilizes internet and online base 
+                    digital technologies, platforms to
+                     promote products and services.
+                     </p>
+                </div>
+                <div class="footer-coloum-two">
+                    <h1 class="footer-main-heading">Company</h1>
+                    <div class="footer-one-menu">
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">Help Center</a></i>
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">About</a></i>
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">Blog</a></i>
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">FAQs</a></i>
+                    </div> 
+                </div>
+                <div class="footer-coloum-three">
+                    <h1 class="footer-main-heading">Privacy</h1>
+                   
+                    <div class="footer-one-menu">
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">Term & Condition</a></i>
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">Supports</a></i>
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">Exparts</a></i>
+                        <i class="fa fa-angle-double-right footer-angle"><a href="#">Privacy & Policy</a></i>
+                    </div>
+                </div>
+                <div class="footer-coloum-four">
+                    <h1 class="footer-main-heading">Contact Us</h1>
+                    <div class="footer-contact">
+                        <i class="fa fa-envelope"></i><span>support@example.com</span>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fa fa-phone"></i><span>+923000000000</span>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fa fa-globe"></i><span>support@example.com</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer-line">
+                <hr>
+            </div>
+            <div class="footer-underline-menu">
+                <div class="footer-credit">
+                 <span>Designed By:<a href="codebyadnan.com">Adnan Khan</a></span>   
+                </div>
+                <div class="footer-underline-menu-items">
+                <a href="#">Terms of use</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+            </div>
+            </div>
+        </footer>
+       
+</body>
+</html>
